@@ -1,5 +1,10 @@
 package hu.nive.ujratervezes.kepesitovizsga.phonebook;
 
+import java.io.BufferedWriter;
+import java.io.IOException;
+import java.nio.file.Files;
+import java.nio.file.Path;
+import java.nio.file.StandardOpenOption;
 import java.util.Map;
 
 public class Phonebook {
@@ -15,5 +20,16 @@ public class Phonebook {
             }
             sb.append(entry.getKey() + ": " + entry.getValue());
         }
+
+        try (BufferedWriter writer = Files.newBufferedWriter(Path.of(output), StandardOpenOption.APPEND)) {
+            for (Map.Entry entry: contacts.entrySet()) {
+                writer.write(entry.getKey() + ": " + entry.getValue() + "\n");
+            }
+        } catch (IOException e) {
+            throw new IllegalStateException("Can't open file", e);
+        }
+
     }
+
+
 }

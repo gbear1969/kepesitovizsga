@@ -14,7 +14,7 @@ import java.util.TreeMap;
 import static org.junit.jupiter.api.Assertions.*;
 
 class PhonebookTest {
-/*
+
     private Phonebook phonebook;
 
     @BeforeEach
@@ -24,7 +24,7 @@ class PhonebookTest {
 
     @Test
     void test_nullPhonebook() {
-        String outputPath = "phonebookOutput/output0.txt";
+        String outputPath = "hu/nive/ujratervezes/kepesitovizsga/phonebook/phonebookOutput/output0.txt";
         assertThrows(IllegalArgumentException.class, () -> phonebook.exportPhonebook(null, outputPath));
         assertFalse(Path.of(outputPath).toFile().exists());
     }
@@ -36,7 +36,7 @@ class PhonebookTest {
 
     @Test
     void test_emptyPhonebook() throws IOException {
-        String actualPath = "phonebookOutput/output1.txt";
+        String actualPath = "hu/nive/ujratervezes/kepesitovizsga/phonebook/phonebookOutput/output1.txt";
         TreeMap<String, String> contacts = new TreeMap<>();
         phonebook.exportPhonebook(contacts, actualPath);
 
@@ -47,7 +47,7 @@ class PhonebookTest {
 
     @Test
     void test_singleEntry() throws IOException {
-        String actualPath = "phonebookOutput/output2.txt";
+        String actualPath = "hu/nive/ujratervezes/kepesitovizsga/phonebook/phonebookOutput/output2.txt";
         TreeMap<String, String> contacts = new TreeMap<>();
         contacts.put("John Doe", "1-555-1010");
         phonebook.exportPhonebook(contacts, actualPath);
@@ -61,7 +61,7 @@ class PhonebookTest {
 
     @Test
     void test_multipleEntries() throws IOException {
-        String actualPath = "phonebookOutput/output3.txt";
+        String actualPath = "hu/nive/ujratervezes/kepesitovizsga/phonebook/phonebookOutput/output3.txt";
         TreeMap<String, String> contacts = new TreeMap<>();
         contacts.put("Jane Doe", "1-555-1111");
         contacts.put("John Doe", "1-555-1010");
@@ -73,5 +73,5 @@ class PhonebookTest {
         assertTrue(Path.of(actualPath).toFile().exists());
         Set<String> actual = new HashSet<>(Files.readAllLines(Path.of(actualPath)));
         assertEquals(expected, actual);
-    }*/
+    }
 }
