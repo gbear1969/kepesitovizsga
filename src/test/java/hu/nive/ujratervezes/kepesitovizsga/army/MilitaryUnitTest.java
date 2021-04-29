@@ -8,7 +8,7 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertTrue;
 
 class MilitaryUnitTest {
-/*
+
     @Test
     void testArcher() {
         Archer archer = new Archer();
@@ -44,5 +44,5 @@ class MilitaryUnitTest {
         swordsman.sufferDamage(20);
         assertEquals(80, swordsman.getHitPoints());
         assertEquals(10, swordsman.doDamage());
-    }*/
+    }
 }
