@@ -11,7 +11,7 @@ import java.util.List;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
 class JurassicParkTest {
-/*
+
 
     private JurassicPark jurassicPark;
 
@@ -38,5 +38,5 @@ class JurassicParkTest {
         assertEquals(List.of("Hypsilophodontida", "Maiasaurus", "Velociraptor"), jurassicPark.checkOverpopulation());
     }
 
-*/
+
 }
